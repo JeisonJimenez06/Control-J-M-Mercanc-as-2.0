@@ -1,0 +1,61 @@
+:root { --primary-gradient: linear-gradient(135deg, #0d6efd 0%, #198754 100%); }
+body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
+.pago-ok { border-left: 8px solid #198754 !important; background-color: #eef9f1 !important; }
+.pago-deuda { border-left: 8px solid #dc3545 !important; background-color: #fceaea !important; }
+.logo-icon { width: 45px; height: 45px; background: var(--primary-gradient); border-radius: 12px; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+.hidden { display: none !important; }
+.card { border-radius: 15px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.input-calculado { background-color: #e9ecef !important; font-weight: bold; color: #0d6efd !important; }
+.main-container { flex: 1; }
+footer {
+    background: white;
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+}
+
+footer .logo-icon.small {
+    border-radius: 8px;
+}
+
+footer h6 {
+    color: #212529;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+footer a:hover {
+    color: #0d6efd !important;
+}
+/* Estilos para el Modal de Vista Previa */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8); z-index: 10000;
+    display: flex; align-items: center; justify-content: center; padding: 20px;
+}
+.modal-preview {
+    background: white; padding: 20px; border-radius: 15px;
+    max-width: 400px; width: 100%; max-height: 90vh; overflow-y: auto;
+}
+.ticket-container {
+    background: #fff; border: 1px solid #ccc; 
+    margin: 15px 0; display: flex; justify-content: center;
+}
+/* Ajustes para el Footer Pro */
+#mainFooter {
+    border-top: 1px solid #eee;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.02);
+}
+
+.logo-icon.small {
+    border-radius: 8px;
+    background: var(--primary-gradient);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a:hover {
+    color: #0d6efd !important;
+}
