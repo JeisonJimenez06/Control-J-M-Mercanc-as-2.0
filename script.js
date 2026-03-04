@@ -124,7 +124,7 @@ async function procesarDescargaPDF(nombreCliente) {
         if (datosParaPDF) {
             const f = datosParaPDF;
             const saldo = (f.Precio || 0) - (f.Abono || 0);
-            const msj = `Hola *${f.Cliente}*, J&M Mercancía le adjunta su factura de *${f.Producto}*. Su saldo actual es: *$${saldo.toLocaleString('es-CO')}*.`;
+            const msj = `Buen día, Recibe un cordial saludo, *${f.Cliente}*, J&M Mercancía le adjunta su factura del producto adquirido *${f.Producto}*. Se le informa que el valor por pagar es de: *$${saldo.toLocaleString('es-CO')}*.`;
             
             const telLimpiado = (f.Telefono || '').replace(/\D/g,'');
             if(telLimpiado) {
@@ -171,7 +171,7 @@ document.getElementById('formM').addEventListener('submit', async (e) => {
 function enviarWhatsApp(r) {
     const f = r.fields;
     const saldo = (f.Precio || 0) - (f.Abono || 0);
-    const msj = `Hola *${f.Cliente}*, J&M Mercancía le informa su saldo de *${f.Producto}*: *$${saldo.toLocaleString('es-CO')}*.`;
+    const msj = `Buen día, Recibe un cordial saludo, *${f.Cliente}*, J&M Mercancía le informa que el valor por pagar es de  *${f.Producto}*: *$${saldo.toLocaleString('es-CO')}*.`;
     window.open(`https://wa.me/57${(f.Telefono || '').replace(/\D/g,'')}?text=${encodeURIComponent(msj)}`, '_blank');
 }
 
@@ -222,4 +222,5 @@ async function borrar(id) {
 function filtrar() {
     const val = document.getElementById('searchInput').value.toUpperCase();
     document.querySelectorAll('#lista tr').forEach(tr => tr.style.display = tr.innerText.toUpperCase().includes(val) ? "" : "none");
+
 }
